@@ -1,0 +1,35 @@
+本程序在编译过程中，参考了大量网络资料。这里不一一例举。
+向所有支持项目的开发的网博作者、工程师、技术人员表示衷心的感谢。
+
+特别鸣谢
+郁金香技术培训              http://www.yjxsoft.net 
+                            http://www.yjxsoft.com
+朱海铭 域名支持             
+GitHub 开源项目 作者:rsky   https://github.com/rsky/qrcode
+
+
+
+
+
+鸣谢：
+vultr服务器支持             http://www.vultr.com
+京东服务器支持              http://www.jcloud.com
+DNSPOD域名解析支持          http://www.dnspod.cn
+阿里云OSS存储支持           http://www.aliyun.com
+MSDN-我告诉你正版镜像支持   http://www.itellyou.cn
+w3c-school 文档支持         http://www.w3school.com.cn
+新浪云 SVN服务支持          http://www.sinacloud.com/
+52svn  SVN服务支持          http://www.52svn.com/
+
+微信公众号平台及其技术团队
+CSDN博客、论坛、资源下载
+联图二维码平台
+百度搜索及其下属百度开发者、百度翻译、百度贴吧运营团队
+Amaze UI 开发团队 
+Hbuild   开发团队
+
+MFC/C++ 相关交流群 346621084
+                   173408154
+
+                                                        
+
