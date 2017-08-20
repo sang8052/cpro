@@ -50,7 +50,7 @@
 		    $row=selectmysql($sql);
 		    if($row!=''){if($keypass==$row['keypass'])
 		    { $limittime=$row['limittime'];
-		    	if(strtotime($limittime)>strtotime($nowtime)&&$row['keystate']==1)
+		    	if(strtotime($limittime)>strtotime($nowtime))
 		    	{$state="授权成功";}
 		      else{
 		      	$sql="update appkey set keystate=0 where keyvalue='".$keyvalue."'";
