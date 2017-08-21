@@ -1,0 +1,380 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\My.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_INDEX DIALOGEX 0, 0, 509, 265
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "图书馆管理系统"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TAB_MAIN,"SysTabControl32",0x0,7,7,495,251
+END
+
+IDD_LOGIN DIALOGEX 0, 0, 217, 145
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "登录——图书馆管理系统"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "登录",IDC_BUTTON_LOGIN,33,121,67,17
+    ICON            IDI_ICON2,IDC_STATIC,17,38,20,20
+    ICON            IDI_ICON3,IDC_STATIC,18,78,20,20
+    LTEXT           "用户名",IDC_STATIC,49,45,28,9
+    LTEXT           "版本：",IDC_STATIC,71,108,25,8
+    LTEXT           "密码",IDC_STATIC,49,81,22,11
+    EDITTEXT        IDC_EDIT_USERNAME,87,42,94,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD,87,79,94,15,ES_AUTOHSCROLL
+    LTEXT           "欢迎使用图书馆管理系统，请登录！",IDC_STATIC,45,16,137,12
+    LTEXT           "版本号动态显示区",IDC_STATIC_VER,99,108,76,8
+    PUSHBUTTON      "取消",IDC_BUTTON_CANCEL,124,121,67,17
+END
+
+IDD_FUN_LETURN DIALOGEX 0, 0, 572, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "使用微信扫码也可以借书还书哦!赶快打开微信,扫描下方二维码,使用微信扫码借还书吧.",IDC_STATIC,405,63,116,27
+    LTEXT           "请输入图书的15位唯一图书码(注意不是10位书号码哦)",IDC_STATIC,35,57,97,25
+    EDITTEXT        IDC_EDIT_BOOKNUM,148,59,123,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "查询",IDC_BUTTON1,287,57,66,17
+    LTEXT           "书名",IDC_STATIC,114,95,29,11
+    EDITTEXT        IDC_EDIT_BOOKNAME,148,91,123,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BOOKWRITER,148,129,123,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BOOKSTATE,148,169,123,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "借书",IDC_BUTTON2,116,207,83,19
+    PUSHBUTTON      "还书",IDC_BUTTON3,226,206,83,19
+    LTEXT           "作者",IDC_STATIC,113,132,20,12
+    LTEXT           "状态",IDC_STATIC,113,170,22,13
+    CONTROL         "",IDC_EXPLORER_QR,
+                    "{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,400,105,131,103
+END
+
+IDD_FUN_SELECT DIALOGEX 0, 0, 574, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,225,50,14
+    PUSHBUTTON      "取消",IDCANCEL,517,225,50,14
+    LTEXT           "查询",IDC_STATIC,127,67,194,40
+END
+
+IDD_FUN_ADD DIALOGEX 0, 0, 571, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,225,50,14
+    PUSHBUTTON      "取消",IDCANCEL,514,225,50,14
+    LTEXT           "添加",IDC_STATIC,191,113,103,39
+END
+
+IDD_FUN_MYLEND DIALOGEX 0, 0, 574, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,225,50,14
+    PUSHBUTTON      "取消",IDCANCEL,517,225,50,14
+    LTEXT           "我借的书",IDC_STATIC,190,94,95,22
+END
+
+IDD_FUN_ABOUT DIALOGEX 0, 0, 568, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         145,IDC_BIG_LOGO,"Static",SS_BITMAP,27,42,85,79
+    CTEXT           "图书馆管理系统",IDC_STATIC,127,39,118,12
+    CONTROL         "",IDC_EXPLORER_ABOUT,
+                    "{8856F961-340A-11D0-A96B-00C04FD705A2}",WS_TABSTOP,245,48,306,172
+    CTEXT           "版本:",IDC_STATIC,122,65,25,10
+    CTEXT           "版本信息动态显示区",IDC_STATIC_VER,153,65,80,8
+    CTEXT           "更多信息请访问http://www.wt-dk.cn/wordpress/cpro/",IDC_STATIC_ABOUTURL,37,211,197,15
+    CTEXT           "作者:",IDC_STATIC,122,91,25,11
+    CTEXT           "桑泽寰       陈振东",IDC_STATIC,153,91,82,8
+    LTEXT           "周阳         商益辉",IDC_STATIC,163,111,62,9
+    LTEXT           "本程式遵循MIT许可协议",IDC_STATIC,51,131,93,10
+    LTEXT           "版权所有",IDC_STATIC,47,148,47,11
+    LTEXT           "2017    (C)     sang8052",IDC_STATIC,97,148,86,8
+    LTEXT           "2017    (C)      www.wt-dk.cn",IDC_STATIC,97,164,168,13
+    LTEXT           "2017      (C)      2016届南京航天航空大学金城学院信息工程系软件工程4班",IDC_STATIC,97,180,138,17
+END
+
+IDD_FUN_RESET DIALOGEX 0, 0, 574, 249
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "修改图书信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,228,50,14
+    PUSHBUTTON      "取消",IDCANCEL,517,228,50,14
+    LTEXT           "修改",IDC_STATIC,174,97,69,45
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "图书馆管理系统"
+            VALUE "FileVersion", "1.0.0.2.beta"
+            VALUE "InternalName", "图书馆管理系统.exe"
+            VALUE "LegalCopyright", "2017 (C) 2016届南京航天航空大学金城学院信息工程系软件工程4班。保留所有权利。"
+            VALUE "OriginalFilename", "图书馆管理系统.exe"
+            VALUE "ProductName", "图书馆管理系统"
+            VALUE "ProductVersion", "1.0.0.2.beta"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_INDEX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 502
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 208
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_FUN_LETURN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 565
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 237
+        HORZGUIDE, 244
+    END
+
+    IDD_FUN_SELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 567
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_FUN_ADD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 564
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_FUN_MYLEND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 567
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_FUN_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 561
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_FUN_RESET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 567
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "logo.ico"
+IDI_ICON2               ICON                    "user.ico"
+IDI_ICON3               ICON                    "pass.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_BIG          BITMAP                  "biglogo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_FUN_ABOUT DLGINIT
+BEGIN
+    IDC_EXPLORER_ABOUT, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x2f70, 0x0000, 0x1cf0, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0008, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+IDD_FUN_LETURN DLGINIT
+BEGIN
+    IDC_EXPLORER_QR, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x145c, 0x0000, 0x1143, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0008, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 图书馆管理系统(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\My.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

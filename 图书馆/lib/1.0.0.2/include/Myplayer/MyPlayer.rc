@@ -1,0 +1,254 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\MyPlayer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\MyPlayer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MYPLAYER_DIALOG DIALOGEX 0, 0, 249, 259
+STYLE DS_SYSMODAL | DS_MODALFRAME | DS_SETFOREGROUND | WS_MINIMIZEBOX | 
+    WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "MyPlayer"
+MENU IDR_MENU1
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "退出",IDOK,190,234,35,13
+    DEFPUSHBUTTON   "全屏",IDC_FULLY,17,234,35,13
+    DEFPUSHBUTTON   "音量+",IDC_VOLUME_ADD,57,234,35,13
+    DEFPUSHBUTTON   "音量-",IDC_VOLUME_REDUCE,101,234,35,13
+    DEFPUSHBUTTON   "静音",IDC_VOLUME_MUTE,143,234,35,13
+    CONTROL         "",IDC_ACTIVEMOVIECONTROL1,
+                    "{05589FA1-C356-11CE-BF01-00AA0055595A}",WS_TABSTOP,7,7,
+                    235,200
+    EDITTEXT        IDC_EDIT1,14,217,220,12,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "",IDC_STATIC,7,209,235,43
+END
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 137, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Myplayer..."
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,87,23,33,13
+    CONTROL         132,IDC_STATIC,"Static",SS_BITMAP,14,13,21,21
+    LTEXT           "MyPlayer ",IDC_STATIC,41,13,37,8
+    LTEXT           "版本 0.1",IDC_STATIC,40,29,33,8
+    LTEXT           "版权所有 2007",IDC_STATIC,19,45,53,8
+    LTEXT           "作者：小路",IDC_STATIC,77,45,47,8
+    GROUPBOX        "",IDC_STATIC,7,7,123,52
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "MyPlayer Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "MyPlayer\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2007\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "MyPlayer.EXE\0"
+            VALUE "ProductName", "MyPlayer 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MYPLAYER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 252
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_MYPLAYER_DIALOG DLGINIT
+BEGIN
+    IDC_ACTIVEMOVIECONTROL1, 0x378, 0, 0
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "打开",                        ID_MENUITEMOpen
+        MENUITEM "退出",                        ID_MENUITEMExit
+    END
+    POPUP "控制(&C)"
+    BEGIN
+        MENUITEM "全屏",                        ID_MENUITEMFull
+        POPUP "音量"
+        BEGIN
+            MENUITEM "增大",                        ID_MENUITEMAdd
+            MENUITEM "减小",                        ID_MENUITEMDelete
+        END
+        MENUITEM "静音",                        ID_MENUITEMW
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 MyPlayer...",            ID_MENUITEMAbout
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\MyPlayer4.bmp"
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\MyPlayer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

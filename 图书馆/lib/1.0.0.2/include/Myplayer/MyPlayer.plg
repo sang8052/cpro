@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MyPlayer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\lu\LOCALS~1\Temp\RSP119.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Release/" /Fp"Release/MyPlayer.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /GZ /c 
+"D:\project\MyPlayer\MyPlayer.cpp"
+"D:\project\MyPlayer\MyPlayerDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\lu\LOCALS~1\Temp\RSP119.tmp" 
+Creating temporary file "C:\DOCUME~1\lu\LOCALS~1\Temp\RSP11A.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Release/MyPlayer.pdb" /debug /machine:I386 /out:"Release/MyPlayer.exe" /pdbtype:sept 
+.\Release\activemovie3.obj
+.\Release\MyDlgAbout.obj
+.\Release\MyPlayer.obj
+.\Release\MyPlayerDlg.obj
+.\Release\StdAfx.obj
+.\Release\MyPlayer.res
+]
+Creating command line "link.exe @C:\DOCUME~1\lu\LOCALS~1\Temp\RSP11A.tmp"
+<h3>Output Window</h3>
+Compiling...
+MyPlayer.cpp
+Generating Code...
+Skipping... (no relevant changes detected)
+MyPlayerDlg.cpp
+Linking...
+Creating command line "bscmake.exe /nologo /o"Release/MyPlayer.bsc"  .\Release\StdAfx.sbr .\Release\activemovie3.sbr .\Release\MyDlgAbout.sbr .\Release\MyPlayer.sbr .\Release\MyPlayerDlg.sbr"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+MyPlayer.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
