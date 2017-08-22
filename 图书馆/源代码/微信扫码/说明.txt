@@ -1,0 +1,34 @@
+一、文件用途
+MP_verify_D9gz16qF9U4TrgPg.txt是微信在进行api调用时验证网站所有者主权的一个文件，请不要删除。
+以w_开头的php文件均是微信在实现js调用过程中所必须用到的代码，请不要更改这些代码。
+项目的入口文件是api.php;请不要更改文件名，否则可能回造成程序出错
+
+二、API调用规范
+   
+    将二维码转换成图片
+	这里我们调用的是liantu.com的一个API。
+	引用范例
+	    1.使用<img src="http://qr.liantu.com/api.php?w=*&text=x"/>进行引用
+        2.下载图片 http://qr.liantu.com/api.php?w=*&text=x 进行引用
+		注意：这里的*和x为参数。
+		      *是一个用于界定生成二维码图片的参数。（理想的值推荐为110）
+			  x是二维码中应该包含的消息的参数。但如果x中存在&，应该用 %26来代替
+			  
+	如何调起微信扫码授权接口
+	
+	调起微信的扫码授权接口，是通过访问一个带有参数的网址实现的
+	这个网址应该服从下面的书写格式 http://mysscloud.xyz/api.php?keyvalue=xxxxxxxxxx&keypass=xxxxxxxxxx
+	其中 第一个xxxxxxxxxx表示传入的keyvalue的加密字符 第二个xxxxxxxxxxx表示传入的keypass密码
+	调起授权接口成功后，会出现 借书扫码/还书扫码 的功能选择页面；
+	无论单击哪个按钮都会弹起微信扫码界面，
+	不同的是，单击借书扫码，浏览器会自动访问下面格式的网址 http://mysscloud.xyz/server.php?fun=lend&bookmun=xxxxxxxxxxxxxxx&keyvalue=xxxxxxxxxx&keypass=xxxxxxxxxx
+	          单击还书扫码，浏览器会自动访问下面格式的网址 http://mysscloud.xyz/server.php?fun=return&&bookmun=xxxxxxxxxxxxxxx&keyvalue=xxxxxxxxxx&keypass=xxxxxxxxxx
+			  注：第一个xxxxxxxxxxx表示图书的书本号（15位不带符号的字符串）第二个xxxxxxxxxxxx和第三个xxxxxxxxxxxxxx分别表示keyvalue和keypass
+	但相同的，访问的网址会被server.php处理，并返回访问 http://mysscloud.xyz/api.php?keyvalue=xxxxxxxxxx&keypass=xxxxxxxxxx&s=xx;
+	          这里 第一个xxxxxxxxxx表示传入的keyvalue的加密字符 第二个xxxxxxxxxxx表示传入的keypass密码 ，最后的x表示返回的状态码
+			       如果缺省参数 x=00；
+				   x=11 表示借书成功                           x=21 表示还书成功
+				   x=12 表示应为不存在对应图书号的书而借书失败 x=22 表示应为不存在对应图书号的书而还书失败
+				   x=13 表示应为此书已经被借出而借书失败       x=23 表示应为此书没有被借出而还书失败
+				   
+				   api.php在检测到s的值不为00 时，会弹出一个对话框。然后再次重调授权接口，出现借书扫码/还书扫码选择界面 

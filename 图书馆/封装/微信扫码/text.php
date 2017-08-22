@@ -1,0 +1,1 @@
+http://star-shop.oss-cn-beijing.aliyuncs.com/SSR.zip
