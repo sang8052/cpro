@@ -171,6 +171,9 @@ void 图书查询标签::OnBnClickedSelectDel()
 	SQL.Format("delete from booktype where id='%s'",showdata);
 	SQLtosql();
 	mysql_query(conn,sql);
+	SQL.Format("delete from booknum where bookid='%s'",showdata);
+	SQLtosql();
+	mysql_query(conn,sql);
 	MessageBox("删除成功！");
     OnBnClickedSelect();
 	}
