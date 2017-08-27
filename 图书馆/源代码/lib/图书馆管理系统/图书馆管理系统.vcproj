@@ -45,7 +45,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;C:\Documents and Settings\Administrator\桌面\图书馆\源代码\lib\include\Myplayer&quot;;&quot;C:\Documents and Settings\Administrator\桌面\lib\new\1.0.0.2\include\Myplayer&quot;;&quot;C:\Program Files\MySQL\MySQL Server 5.5\include&quot;"
+				AdditionalIncludeDirectories="&quot;C:\Documents and Settings\Administrator\桌面\cpro\图书馆\源代码\lib\include\Myplayer&quot;;&quot;C:\Program Files\MySQL\MySQL Server 5.5\include&quot;"
 				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -127,7 +127,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="&quot;C:\Documents and Settings\Administrator\桌面\图书馆\源代码\lib\include\Myplayer&quot;;&quot;C:\Program Files\MySQL\MySQL Server 5.5\include&quot;;&quot;C:\Documents and Settings\Administrator\桌面\lib\new\1.0.0.2\include\Myplayer&quot;"
+				AdditionalIncludeDirectories="&quot;C:\Documents and Settings\Administrator\桌面\cpro\图书馆\源代码\lib\include\Myplayer&quot;;&quot;C:\Program Files\MySQL\MySQL Server 5.5\include&quot;"
 				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG"
 				MinimalRebuild="false"
 				RuntimeLibrary="2"

@@ -44,4 +44,7 @@ public:
 	afx_msg void OnBnClickedSelectReset();
 	afx_msg void OnBnClickedSelectDel();
 	bool CheckPower(void);
+	
+//重载回车消息
+	BOOL  PreTranslateMessage(MSG*   pMsg) ;
 };

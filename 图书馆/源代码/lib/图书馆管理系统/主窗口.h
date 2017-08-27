@@ -45,5 +45,6 @@ public:
     // 自定义的初始化函数
 	void Getready(void);
 	afx_msg void OnTcnSelchangeTabMain(NMHDR *pNMHDR, LRESULT *pResult);
-	
+	//重载回车消息
+	BOOL  PreTranslateMessage(MSG*   pMsg) ;
 };

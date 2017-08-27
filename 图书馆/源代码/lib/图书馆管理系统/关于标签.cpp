@@ -108,3 +108,11 @@ if(SUCCEEDED(pDocument1->get_body(&pE2)))
     }    
 }
 }
+
+BOOL   ¹ØÓÚ±êÇ©::PreTranslateMessage(MSG*   pMsg)    
+  {  
+    if(pMsg->message==WM_KEYDOWN   &&   pMsg->wParam==VK_ESCAPE)     return   TRUE;  
+    if(pMsg->message==WM_KEYDOWN   &&   pMsg->wParam==VK_RETURN)   return  	TRUE;    
+    else    
+          return   CDialog::PreTranslateMessage(pMsg);  
+  }

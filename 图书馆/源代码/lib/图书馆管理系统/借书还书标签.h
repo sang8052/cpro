@@ -52,4 +52,10 @@ public:
 	afx_msg void OnBnClickedButtonSelect();
 	afx_msg void OnBnClickedButtonLend();
 	afx_msg void OnBnClickedButtonReturn();
+    
+   //重载回车消息
+	BOOL  PreTranslateMessage(MSG*   pMsg) ;
+	
 };
+
+

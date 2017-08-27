@@ -160,6 +160,8 @@ void 新书入库标签::OnBnClickedButtonAdd()
 			 }
 		}
      MessageBox("添加成功！");
+	 OnBnClickedButtonReset();
+	 OnInitDialog();
 	}
 }
 
@@ -175,3 +177,12 @@ void 新书入库标签::OnBnClickedButtonReset()
 	UpdateData(false);
 		
 }
+
+	
+	BOOL   新书入库标签::PreTranslateMessage(MSG*   pMsg)    
+  {  
+    if(pMsg->message==WM_KEYDOWN   &&   pMsg->wParam==VK_ESCAPE)     return   TRUE;  
+    if(pMsg->message==WM_KEYDOWN   &&   pMsg->wParam==VK_RETURN)   return  	TRUE;    
+    else    
+          return   CDialog::PreTranslateMessage(pMsg);  
+  }

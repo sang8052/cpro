@@ -291,3 +291,12 @@ void 借书还书标签::OnBnClickedButtonReturn()
 			}
 	   } 
 }
+
+
+BOOL   借书还书标签::PreTranslateMessage(MSG*   pMsg)    
+  {  
+    if(pMsg->message==WM_KEYDOWN   &&   pMsg->wParam==VK_ESCAPE)     return   TRUE;  
+    if(pMsg->message==WM_KEYDOWN   &&   pMsg->wParam==VK_RETURN)   return  	TRUE;    
+    else    
+          return   CDialog::PreTranslateMessage(pMsg);  
+  }

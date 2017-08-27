@@ -110,7 +110,7 @@ HCURSOR 登录窗口::OnQueryDragIcon()
  BOOL   登录窗口::PreTranslateMessage(MSG*   pMsg)    
   {  
     if(pMsg->message==WM_KEYDOWN   &&   pMsg->wParam==VK_ESCAPE)     return   TRUE;  
-    if(pMsg->message==WM_KEYDOWN   &&   pMsg->wParam==VK_RETURN)   return   TRUE;    
+    if(pMsg->message==WM_KEYDOWN   &&   pMsg->wParam==VK_RETURN)   return  enterlogin();    
     else    
           return   CDialog::PreTranslateMessage(pMsg);  
   }
@@ -168,9 +168,12 @@ void 登录窗口::OnBnClickedButtonLogin()
     strDateTime=time.Format(_T("%Y-%m-%d %H:%M:%S"));
     //对输入的用户名和密码进行MD5加密
 	//注意这个MD5加密的函数只适用于英文和数字。
+	
     MD5 md5; 
 	USES_CONVERSION;
+	CString Oldpass;
 	UpdateData(true);//从edit框中获得目前的数据
+	Oldpass=Password;
 	md5.update(Password.GetBuffer());    //因为update函数只接收string类型，所以使用getbuffer()函数转换CString为string
     Password.ReleaseBuffer();
 	Password=md5.toString().c_str();     //toString()函数获得加密字符串，c_str();函数重新转换成CString类型
@@ -179,9 +182,14 @@ void 登录窗口::OnBnClickedButtonLogin()
 	SQLtosql();
     mysql_query(conn,sql);
     res=mysql_store_result(conn);
-	if(mysql_num_rows(res)==0){MessageBox("用户名或密码错误！");}
+	if(mysql_num_rows(res)==0)
+	{
+		MessageBox("用户名或密码错误！");
+		SQL.Format("insert loginlog (ip,time,user,pass,state) value('%s','%s','%s','%s','失败')",ip,strDateTime,Username,Oldpass);
+	}
 	else{
-		if(mysql_num_rows(res)==1){
+		if(mysql_num_rows(res)==1)
+		{
             SQL.Format("UPDATE user SET lastlogintime='%s', lastloginip='%s' where username= '%s'",strDateTime,ip,Username);
 	        SQLtosql();
             mysql_query(conn,sql);
@@ -190,11 +198,16 @@ void 登录窗口::OnBnClickedButtonLogin()
 			theApp.Username=Username;
 			theApp.Logintime=strDateTime;
 			theApp.LimitTime=strlimittime;
-			
-
+			SQL.Format("insert loginlog (ip,time,user,pass,state) value('%s','%s','%s','','成功')",ip,strDateTime,Username);
 		}
-		if(mysql_num_rows(res)!=1){MessageBox("此账户无效！");}
+		if(mysql_num_rows(res)!=1)
+		   {
+			   MessageBox("此账户无效！");
+			  SQL.Format("insert loginlog (ip,time,user,pass,state) value('%s','%s','%s','%s','失败')",ip,strDateTime,Username,Oldpass);
+		    }
         }
+	    SQLtosql();
+		mysql_query(conn,sql);
 
 
 }
@@ -284,4 +297,10 @@ void 登录窗口::Getip(void)
 	if(PathFileExists(Tempfile)){}else {MessageBox("初始化本机ip地址失败，正在重试。。。");
     URLDownloadToFile(0,"http://www.ip138.com/ip2city.asp","LibTempIp.txt",0,NULL);
     if(PathFileExists(Tempfile)){}else{MessageBox("初始化本机ip地址失败!");exit(0);}}}
+}
+
+bool 登录窗口::enterlogin(void)
+{
+	OnBnClickedButtonLogin();
+	return TRUE;
 }

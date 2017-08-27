@@ -34,4 +34,5 @@ public:
 	CExplorer Explorer_About;
 	
 	void DocumentCompleteExplorerAbout(LPDISPATCH pDisp, VARIANT* URL);
+    BOOL  PreTranslateMessage(MSG*   pMsg) ;
 };

@@ -65,4 +65,5 @@ public:
 	void Getip(void);
 	//重载回车消息
 	BOOL  PreTranslateMessage(MSG*   pMsg) ;
+	bool enterlogin(void);
 };

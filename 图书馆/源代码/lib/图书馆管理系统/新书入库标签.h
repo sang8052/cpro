@@ -45,4 +45,7 @@ public:
 	bool ChectInt(double a );
 	afx_msg void OnBnClickedButtonAdd();
 	afx_msg void OnBnClickedButtonReset();
+	
+//重载回车消息
+	BOOL  PreTranslateMessage(MSG*   pMsg) ;
 };

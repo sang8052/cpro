@@ -40,4 +40,7 @@ public:
 	void sql_connect(void);
 	void SQLtosql(void);
 	afx_msg void OnBnClickedButtonListReflash();
+	
+//重载回车消息
+	BOOL  PreTranslateMessage(MSG*   pMsg) ;
 };
