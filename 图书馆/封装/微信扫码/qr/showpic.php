@@ -23,7 +23,7 @@
 	{
 		$keyvalue=$_GET['keyvalue'];
 		$keypass=$_GET['keypass'];
-	echo '<img src="http://qr.topscan.com/api.php?w=150&text=http://mysscloud.xyz/index.php?keyvalue='.$keyvalue.'%26keypass='.$keypass.'" style="position:absolute;top:0;left:0" />';
+	echo '<img src="http://qr.topscan.com/api.php?w=150&text=http://www.mysscloud.xyz/index.php?keyvalue='.$keyvalue.'%26keypass='.$keypass.'" style="position:absolute;top:0;left:0" />';
 	}
 	
 ?>
