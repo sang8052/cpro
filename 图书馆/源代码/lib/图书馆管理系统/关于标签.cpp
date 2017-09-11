@@ -56,7 +56,7 @@ BOOL 关于标签::OnInitDialog()
 	void *lpBuffer=NULL;unsigned int dwBytes=0;VerQueryValue(InfoBuf,SubBlock,&lpBuffer,&dwBytes);
 	CString strTemp=( char *)lpBuffer;strVERSION=strTemp;UpdateData(false);}
 	delete InfoBuf; 
-    Explorer_About.Navigate("mysscloud.xyz/show/thanks.php",NULL,NULL,NULL,NULL);
+    Explorer_About.Navigate("www.mysscloud.xyz/show/thanks.php",NULL,NULL,NULL,NULL);
 
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
@@ -75,7 +75,7 @@ BOOL 关于标签::OnInitDialog()
 void 关于标签::OnStnClickedStaticAbouturl() //点击网址的函数
 {
 	// TODO: 在此添加控件通知处理程序代码
-	ShellExecute(NULL, "open", "http://www.wt-dk.cn/wordpress/cpro/", NULL, NULL, SW_SHOWNORMAL); //调用DOS命令打开浏览器访问页面
+	ShellExecute(NULL, "open", "https://www.szhcloud.cn/wordpress/cpro/", NULL, NULL, SW_SHOWNORMAL); //调用DOS命令打开浏览器访问页面
 }
 BEGIN_EVENTSINK_MAP(关于标签, CDialog)
 	ON_EVENT(关于标签, IDC_EXPLORER_ABOUT, 259, 关于标签::DocumentCompleteExplorerAbout, VTS_DISPATCH VTS_PVARIANT)

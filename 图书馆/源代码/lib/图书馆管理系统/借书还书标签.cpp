@@ -77,7 +77,7 @@ BOOL 借书还书标签::OnInitDialog()
    mysql_query(conn,sql);
    
 	CString Url_Qr_string;
-	Url_Qr_string.Format("http://mysscloud.xyz/qr/showpic.php?keyvalue=%s&keypass=%s",Appkey,Apppass);
+	Url_Qr_string.Format("http://www.mysscloud.xyz/qr/showpic.php?keyvalue=%s&keypass=%s",Appkey,Apppass);
     
 	PIC_QR.Navigate(Url_Qr_string,NULL,NULL,NULL,NULL);
 	return TRUE;
@@ -172,7 +172,7 @@ void 借书还书标签::OnBnClickedButtonRefalsh()
    mysql_query(conn,sql);
    
 	CString Url_Qr_string;
-	Url_Qr_string.Format("http://mysscloud.xyz/qr/showpic.php?keyvalue=%s&keypass=%s",Appkey,Apppass);
+	Url_Qr_string.Format("http://www.mysscloud.xyz/qr/showpic.php?keyvalue=%s&keypass=%s",Appkey,Apppass);
     
 	PIC_QR.Navigate(Url_Qr_string,NULL,NULL,NULL,NULL);
     

@@ -234,12 +234,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "TODO: <南航金城抹茶湖>"
             VALUE "FileDescription", "图书馆管理系统"
-            VALUE "FileVersion", "1.0.1.1"
+            VALUE "FileVersion", "1.0.1.2"
             VALUE "InternalName", "图书馆管理系统.exe"
             VALUE "LegalCopyright", "2017 (C) 2016届南京航天航空大学金城学院信息工程系软件工程4班。保留所有权利。"
             VALUE "OriginalFilename", "图书馆管理系统.exe"
             VALUE "ProductName", "图书馆管理系统"
-            VALUE "ProductVersion", "1.0.1.0"
+            VALUE "ProductVersion", "1.0.1.2"
         END
     END
     BLOCK "VarFileInfo"

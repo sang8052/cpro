@@ -291,11 +291,11 @@ void 登录窗口::Getip(void)
 	if(PathFileExists("LibTempIp.txt")){DeleteFile("LibTempIp.txt ");}//检查缓存文件是否存在，存在即删除
 	char* Tempfile=buffer;
 	//三次尝试获得ip地址
-	URLDownloadToFile(0,"http://www.ip138.com/ip2city.asp","LibTempIp.txt",0,NULL);
+	URLDownloadToFile(0,"http://ip.szhcloud.top/index.php","LibTempIp.txt",0,NULL);
 	if(PathFileExists(Tempfile)){}else{MessageBox("初始化本机ip地址失败，正在重试。。。");
-	URLDownloadToFile(0,"http://www.ip138.com/ip2city.asp","LibTempIp.txt",0,NULL);
+	URLDownloadToFile(0,"http://ip.szhcloud.top/index.php","LibTempIp.txt",0,NULL);
 	if(PathFileExists(Tempfile)){}else {MessageBox("初始化本机ip地址失败，正在重试。。。");
-    URLDownloadToFile(0,"http://www.ip138.com/ip2city.asp","LibTempIp.txt",0,NULL);
+    URLDownloadToFile(0,"http://ip.szhcloud.top/index.php","LibTempIp.txt",0,NULL);
     if(PathFileExists(Tempfile)){}else{MessageBox("初始化本机ip地址失败!");exit(0);}}}
 }
 

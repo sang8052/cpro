@@ -2,9 +2,9 @@
 // Microsoft Visual C++ generated include file.
 // Used by 图书馆管理系统.rc
 //
-#define $MYSQLSERVER                    "116.196.81.185"
+#define $MYSQLSERVER                    "47.94.219.254"
 #define $MYSQLUSER                      "cpro"
-#define $MYSQLPASS                      "6B4F2BDEE6"
+#define $MYSQLPASS                      "c4xtYfjpTN"
 #define $MYSQLDATA                      "cpro"
 #define IDM_ABOUTBOX                    0x0010
 #define IDS_ABOUTBOX                    101
